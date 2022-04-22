@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&family=Overpass:ital,wght@0,200;0,300;0,400;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: hsl(217, 54%, 11%);
+        font-family: "Outfit", sans-serif;
+      }
+      .container {
+        position: absolute;
+        width: 20vw;
+        height: 65vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: hsl(216, 50%, 16%);
+        border-radius: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-container {
+        position: absolute;
+        width: 90%;
+        height: 70%;
+        margin: 5%;
+      }
+      .qr-image {
+        position: absolute;
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        border-radius: 5%;
+      }
+
+      .title {
+        position: absolute;
+        width: 18vw;
+        height: 10vh;
+        bottom: 16%;
+      }
+      .title p {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: left;
+        color: hsl(0, 0%, 100%);
+      }
+      .description {
+        position: absolute;
+        width: 20vw;
+        height: 10vh;
+        bottom: 13%;
+      }
+      .description p {
+        font-weight: 300;
+        font-size: 14px;
+        font-style: normal;
+        text-align: left;
+        color: hsl(215, 51%, 70%);
+        padding: 5%;
+      }
+
+      .left-aligned {
+        position: absolute;
+        width: 18vw;
+        height: 10vh;
+        bottom: 0%;
+      }
+      .left-aligned span {
+        font-size: 15px;
+        color: hsl(178, 100%, 50%);
+      }
+
+      .right-aligned {
+        position: absolute;
+        width: 18vw;
+        height: 10vh;
+        bottom: 0%;
+        left: 66%;
+      }
+
+      .right-aligned img {
+        width: 5%;
+        height: 20%;
+      }
+      .right-aligned span {
+        font-size: 15px;
+        color: hsl(178, 100%, 50%);
+      }
+      .divider {
+        position: absolute;
+        width: 90%;
+        height: 0.3vh;
+        background-color: hsl(215, 32%, 27%);
+        bottom: 9%;
+        border-radius: 50%;
+      }
+
+      .createdBy {
+        position: absolute;
+        width: 90%;
+        height: 5vh;
+        bottom: 2%;
+        font-size: 15px;
+      }
+      .createdBy img {
+        position: absolute;
+        width: 8%;
+        bottom: 9%;
+      }
+
+      .createdBy :nth-child(2) {
+        position: absolute;
+        bottom: 9%;
+        left: 10%;
+        color: hsl(215, 51%, 70%);
+      }
+
+      .createdBy :nth-child(3) {
+        position: absolute;
+        bottom: 9%;
+        left: 38%;
+      }
+
+      @media screen and (max-width: 650px) {
+        .container {
+          width: 85%;
+          height: 80vh;
+        }
+
+        .title {
+          width: 90%;
+        }
+
+        .description {
+          width: 100%;
+        }
+
+        .left-aligned {
+          width: 90%;
+          bottom: 2.5%;
+        }
+
+        .right-aligned {
+          width: 90%;
+          bottom: 2.5%;
+        }
+
+        .createdBy :nth-child(3) {
+          left: 45%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img src="./images/image-equilibrium.jpg" alt="" class="qr-image" />
+      </div>
+      <div class="title">
+        <p>Equilibrium #3429</p>
+      </div>
+
+      <div class="description">
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+      </div>
+
+      <div class="left-aligned">
+        <img src="./images/icon-ethereum.svg" alt="" />
+        <span> 0.041ETH </span>
+      </div>
+
+      <div class="right-aligned">
+        <img src="./images/icon-clock.svg" alt="" />
+        <span> 3 days left </span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="createdBy">
+        <img src="./images/image-avatar.png" alt="" />
+        <span> Creation Of </span>
+        <span>
+          <a href="">Umanand Tripathi</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
